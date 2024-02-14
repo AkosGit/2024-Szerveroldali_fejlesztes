@@ -1,0 +1,31 @@
+﻿@model Calander.Viewmodels.task;
+
+<!DOCTYPE html>
+<html>
+<body>
+
+	<form action="/home/process" method="post">
+        @Html.ValidationSummary();
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label>Task name:</label>
+            <input name="taskname" class="form-control"  required/>
+            <span asp-validation-for="taskname" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Task timespan:</label>
+            <input name="timespan" class="form-control" />
+            <span asp-validation-for="finishtime" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label>Task end time:</label>
+            <input name="end" class="form-control" />
+            <span asp-validation-for="timespan" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="OK" class="btn btn-primary" />
+        </div>
+	</form>
+
+</body>
+</html>

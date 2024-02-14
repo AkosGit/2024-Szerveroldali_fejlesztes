@@ -1,0 +1,28 @@
+﻿@model Calander.Viewmodels.task[]
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+	<div>
+        @foreach (Calander.Viewmodels.task task in @Model)
+        {
+            <div style="margin: 10px;border:dotted;">
+                <a>task name: @task.taskname</a> <br>
+                <a>task span: @task.timespan</a><br>
+                <a>task end: @task.finishtime</a><br>
+            </div>
+
+        }
+    </div>
+
+    <div>
+        <a href="/">Back to task form</a>
+    </div>
+
+</body>
+</html>
